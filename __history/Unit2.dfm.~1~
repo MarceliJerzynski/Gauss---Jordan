@@ -1,0 +1,162 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 433
+  ClientWidth = 710
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 287
+    Top = 83
+    Width = 23
+    Height = 13
+    Caption = 'x1 +'
+  end
+  object Label2: TLabel
+    Left = 287
+    Top = 123
+    Width = 23
+    Height = 13
+    Caption = 'x1 +'
+  end
+  object Label3: TLabel
+    Left = 375
+    Top = 83
+    Width = 26
+    Height = 13
+    Caption = 'x2 = '
+  end
+  object Label4: TLabel
+    Left = 375
+    Top = 123
+    Width = 26
+    Height = 13
+    Caption = 'x2 = '
+  end
+  object Label5: TLabel
+    Left = 184
+    Top = 328
+    Width = 57
+    Height = 23
+    Caption = 'x1   = '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 184
+    Top = 373
+    Width = 51
+    Height = 23
+    Caption = 'x2  = '
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 247
+    Top = 328
+    Width = 135
+    Height = 23
+    Caption = 'Tu bedzie wynik'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 247
+    Top = 373
+    Width = 135
+    Height = 23
+    Caption = 'Tu bedzie wynik'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 232
+    Top = 80
+    Width = 49
+    Height = 21
+    TabOrder = 0
+    Text = '6'
+  end
+  object Edit2: TEdit
+    Left = 320
+    Top = 80
+    Width = 49
+    Height = 21
+    TabOrder = 1
+    Text = '9'
+  end
+  object Edit3: TEdit
+    Left = 407
+    Top = 80
+    Width = 49
+    Height = 21
+    TabOrder = 2
+    Text = '2'
+  end
+  object Edit4: TEdit
+    Left = 232
+    Top = 120
+    Width = 49
+    Height = 21
+    TabOrder = 3
+    Text = '1'
+  end
+  object Edit5: TEdit
+    Left = 320
+    Top = 120
+    Width = 49
+    Height = 21
+    TabOrder = 4
+    Text = '9'
+  end
+  object Edit6: TEdit
+    Left = 407
+    Top = 120
+    Width = 49
+    Height = 21
+    TabOrder = 5
+    Text = '8'
+  end
+  object Button1: TButton
+    Left = 294
+    Top = 248
+    Width = 75
+    Height = 25
+    Caption = 'Licz'
+    TabOrder = 6
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 616
+    Top = 376
+    Width = 75
+    Height = 25
+    Caption = 'Wyjd'#378
+    TabOrder = 7
+    OnClick = Button2Click
+  end
+end

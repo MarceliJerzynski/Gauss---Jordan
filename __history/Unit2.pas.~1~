@@ -1,0 +1,109 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+ TArray2d = array of array of Double;
+  TForm2 = class(TForm)
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    Button1: TButton;
+    Button2: TButton;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    procedure Button2Click(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure GaussJordanEliminationMethod(n : Integer; var Arr: TArray2d);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+  Arr: TArray2d;
+  n : Integer;
+
+implementation
+
+{$R *.dfm}
+
+
+procedure TForm2.GaussJordanEliminationMethod(n : Integer; var Arr: TArray2d);
+var
+ i : Integer;
+ j : Integer;
+ k : Integer;
+ help : Double;
+begin
+    SetLength(Arr, n, n+1);
+
+     for i := 0 to n-1 do //dla kazdego wiersza
+        begin
+          help := Arr[i][i];
+             for j := 0 to n do
+               begin
+                 Arr[i][j] := Arr[i][j]/help;   //w1' = w1/w1[0] i analogicznie
+               end;
+
+             for j := 0 to n-1 do      //dla kazdego wiersza
+              begin
+                if i <> j then          //roznego od tego, ktorym zmieniamy
+                  begin
+                    help:=Arr[j][i];
+                     for k := 0 to n do //dla kazdego elementu w wierszu
+                      begin
+                        Arr[j][k] := Arr[j][k] - Arr[i][k]*help;
+                      end;
+
+                  end;
+              end;
+
+
+        end;
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);   //licz
+var
+  i:Integer;
+begin
+      n:=2;
+      SetLength(Arr, n, n+1);
+       Arr[0][0] := StrToFloat(Edit1.Text);
+       Arr[0][1] := StrToFloat(Edit2.Text);
+       Arr[0][2] := StrToFloat(Edit3.Text);
+       Arr[1][0] := StrToFloat(Edit4.Text);
+       Arr[1][1] := StrToFloat(Edit5.Text);
+       Arr[1][2] := StrToFloat(Edit6.Text);
+
+       GaussJordanEliminationMethod(2, Arr);
+
+
+       Label7.Caption := FloatToStr(Arr[0][2]);
+       Label8.Caption := FloatToStr(Arr[1][2])
+
+end;
+
+procedure TForm2.Button2Click(Sender: TObject);
+var
+  i: Integer;
+begin
+  Application.Terminate();
+end;
+
+end.
